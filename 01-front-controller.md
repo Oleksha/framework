@@ -22,7 +22,7 @@
 require __DIR__ . '/../src/Bootstrap.php';
 ```
 
-`__DIR__` это [предопределенная константа](http://php.net/manual/ru/language.constants.predefined.php) языка `PHP` содержащая путь к каталогу нашего приложения. Используя ее, можно добиться того, чтобы `require` всегда содержал корректный относительный путь к файлу независимо от того, куда мы захотим перенести наше приложение. Если мы этого не сделаем, то вызвав `index.php` из другой папки, наше приложение закончится ошибкой.
+`__DIR__` это [предопределенная константа](http://php.net/manual/ru/language.constants.predefined.php) языка `PHP` содержащая путь к каталогу нашего приложения. Используя ее, можно добиться того, чтобы `require` всегда содержал корректный относительный путь к файлу независимо от того, куда мы захотим перенести наше приложение. Если мы этого не сделаем, то вызвав `index.php` из другой папки, наше приложение вызовет ошибку.
 
 `declare(strict_types = 1);` sets the current file to [strict typing](http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration.strict). In this tutorial we are going to use this for all PHP files. This means that you can't just pass an integer as a parameter to a method that requires a string. If you don't use strict mode, it would be automatically casted to the required type. With strict mode, it will throw an Exception if it is the wrong type.
 
