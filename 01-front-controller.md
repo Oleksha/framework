@@ -24,13 +24,13 @@ require __DIR__ . '/../src/Bootstrap.php';
 
 `__DIR__` это [предопределенная константа](http://php.net/manual/ru/language.constants.predefined.php) языка `PHP` содержащая путь к каталогу нашего приложения. Используя ее, можно добиться того, чтобы `require` всегда содержал корректный относительный путь к файлу независимо от того, куда мы захотим перенести наше приложение. Если мы этого не сделаем, то вызвав `index.php` из другой папки, наше приложение вызовет ошибку.
 
-`declare(strict_types = 1);` sets the current file to [strict typing](http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration.strict). In this tutorial we are going to use this for all PHP files. This means that you can't just pass an integer as a parameter to a method that requires a string. If you don't use strict mode, it would be automatically casted to the required type. With strict mode, it will throw an Exception if it is the wrong type.
+`declare(strict_types = 1);` устанавливает для текущего файла [строгую типизацию](http://php.net/manual/ru/functions.arguments.php#functions.arguments.type-declaration.strict). В данном руководстве мы будем использовать ее для всех файлов `PHP`. Это означает, что если вы передадите целое число вместо строки в качестве параметра методу, это вызовет ошибку. Если не использовать строгую типизацию, то переданный параметр будет автоматически приведен к требуемому типу. При строгой типизации в такой ситуации будет выброшено исключение.
 
-The `Bootstrap.php` will be the file that wires your application together. We will get to it shortly.
+`Bootstrap.php` – это файл, который и является файлом нашего приложения. К нему мы перейдем в ближайшее время.
 
-The rest of the public folder is reserved for your public asset files (like JavaScript files and stylesheets).
+Также в папке `public` будут размещены другие публичные файлы (например, JavaScript-файлы и таблицы стилей CSS).
 
-Now navigate inside your `src` folder and create a new `Bootstrap.php` file with the following content:
+Теперь в папке `src` создайте файл `Bootstrap.php` содержащий следующий код:
 
 ```php
 <?php declare(strict_types = 1);
