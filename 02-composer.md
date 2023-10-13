@@ -44,12 +44,12 @@
 
 Добавление файла `composer.lock` в систему контроля версий – это хорошая практика для любых проектов. Это позволяет инструментам тестирования (например, [Travis CI](https://travis-ci.org/)) запускать тесты на тех же версиях библиотек, на которых ведется разработка. Это также позволит людям, работающим над проектом, использовать те же версии библиотек, что устраняет источник проблем типа "работает только на моей машине"
 
-That being said, [you don't want to put the actual source code of your dependencies in your git repository](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md). So let's add a rule to our `.gitignore` file:
+Тем не менее, [не стоит помещать в git-репозиторий исходный код зависимых библиотек](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md). Поэтому давайте добавим еще одно правило в наш файл `.gitignore`: 
 
 ```
 vendor/
 ```
 
-Now you have successfully created an empty playground which you can use to set up your project.
+Можно сказать, что мы успешно создали каркас, на котором можно строить свой дальнейший проект.
 
 [<< Предыдущая тема](01-front-controller.md) | [Следующая тема >>](03-error-handler.md)
