@@ -22,17 +22,17 @@
 
 **Это руководство написано для PHP 7.0 или более новых версий.** Если вы используете более старую версию, пожалуйста, обновите ее перед началом работы. Я рекомендую использовать [текущую стабильную версию](http://php.net/downloads.php).
 
-Итак, давайте сразу же начнем обучение и обратимся к [первой части](01-front-controller.md).
+Итак, давайте сразу же начнем обучение и обратимся к [первой части](docs/01-front-controller.md).
 
 ### Содержание
 
-1. [Front Controller](01-front-controller.md)
-2. [Composer](02-composer.md)
-3. [Обработчик ошибок](03-error-handler.md)
-4. [HTTP](04-http.md)
-5. [Маршрутизатор](05-router.md)
-6. [Класс диспетчеризации](06-dispatching-to-a-class.md)
-7. [Инверсия управления](07-inversion-of-control.md)
+1. [Front Controller](docs/01-front-controller.md)
+2. [Composer](docs/02-composer.md)
+3. [Обработчик ошибок](docs/03-error-handler.md)
+4. [HTTP](docs/04-http.md)
+5. [Маршрутизатор](docs/05-router.md)
+6. [Класс диспетчеризации](docs/06-dispatching-to-a-class.md)
+7. [Инверсия управления](docs/07-inversion-of-control.md)
 8. [Dependency Injector](08-dependency-injector.md)
 9. [Templating](09-templating.md)
 10. [Dynamic Pages](10-dynamic-pages.md)
