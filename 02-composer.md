@@ -36,13 +36,13 @@
 }
 ```
 
-In the autoload part you can see that I am using the `Example` namespace for the project. You can use whatever fits your project there, but from now on I will always use the `Example` namespace in my examples. Just replace it with your namespace in your own code.
+В секции `autoload` я установил для своего проекта пространство имен `Example`. Вы можете использовать любое имя, которое подходит для вашего проекта, но в своих примерах я всегда буду использовать пространство имен `Example`. Но вы можете изменить его, указав свое пространство имен в этом месте кода.
 
-Open a new console window and navigate into your project root folder. There run `composer update`.
+Откройте окно консоли и перейдите в корневую папку проекта. В командной строке выполните команду `composer update`.
 
-Composer creates a `composer.lock` file that locks in your dependencies and a vendor directory. 
+`Composer` создаст файл `composer.lock` и каталог `vendor` в котором будут находится сторонние библиотеки используемые вашим проектом. 
 
-Committing the `composer.lock` file into version control is generally good practice for projects. It allows continuation testing tools (such as [Travis CI](https://travis-ci.org/)) to run the tests against the exact same versions of libraries that you're developing against. It also allows all people who are working on the project to use the exact same version of libraries i.e. it eliminates a source of "works on my machine" problems.
+Добавление файла `composer.lock` в систему контроля версий – это хорошая практика для любых проектов. Это позволяет инструментам тестирования (например, [Travis CI](https://travis-ci.org/)) запускать тесты на тех же версиях библиотек, на которых ведется разработка. Это также позволит людям, работающим над проектом, использовать те же версии библиотек, что устраняет источник проблем типа "работает только на моей машине"
 
 That being said, [you don't want to put the actual source code of your dependencies in your git repository](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md). So let's add a rule to our `.gitignore` file:
 
