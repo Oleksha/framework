@@ -35,19 +35,19 @@ require __DIR__ . '/../src/Bootstrap.php';
 ```php
 <?php declare(strict_types = 1);
 
-echo 'Hello World!';
+echo 'Привет мир!';
 ```
 
-Now let's see if everything is set up correctly. Open up a console and navigate into your projects `public` folder. In there type `php -S localhost:8000` and press enter. This will start the built-in webserver and you can access your page in a browser with `http://localhost:8000`. You should now see the 'hello world' message.
+Давайте проверим, все ли мы  сделали правильно. Откройте консоль и перейдите в папку `public` вашего проекта. В командной строке наберите `php -S localhost:8000` и нажмите клавишу Enter. Это приведет к запуску встроенного веб-сервера, и вы сможете открыть свое приложение в браузере по адресу `http://localhost:8000`. Если вы увидите сообщение 'Привет мир!' значит все работает правильно.
 
-If there is an error, go back and try to fix it. If you only see a blank page, check the console window where the server is running for errors.
+Если возникла ошибка, вернитесь назад и попробуйте ее исправить. Если вы увидите пустую страницу, посмотрите на окно консоли, в котором запущен сервер, на наличие ошибок.
 
-Now would be a good time to commit your progress. If you are not already using Git, set up a repository now. This is not a Git tutorial so I won't go over the details. But using version control should be a habit, even if it is just for a tutorial project like this.
+Сейчас самое время зафиксировать достигнутый результат. Если вы еще этого не сделали, создайте репозиторий `Git`. Это не учебник по использованию этого сервиса, поэтому я не буду подробно останавливаться на этом. Но использование контроля версий должно стать привычкой, даже если это только обучающий проект, как наш.
 
-Some editors and IDE's put their own files into your project folders. If that is the case, create a `.gitignore` file in your project root and exclude the files/directories. Below is an example for PHPStorm:
+Некоторые редакторы и среды разработки помещают свои сервисные файлы в папку проекта. Если это ваш случай создайте в корне проекта файл `.gitignore` и внесите в него эти файлы/каталоги. Ниже приведен пример для среды разработки `PHPStorm`:
 
 ```
 .idea/
 ```
 
-[next >>](02-composer.md)
+[Следующая тема >>](02-composer.md)
