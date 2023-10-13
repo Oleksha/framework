@@ -32,7 +32,7 @@
 4. [HTTP](04-http.md)
 5. [Маршрутизатор](05-router.md)
 6. [Класс диспетчеризации](06-dispatching-to-a-class.md)
-7. [Inversion of Control](07-inversion-of-control.md)
+7. [Инверсия управления](07-inversion-of-control.md)
 8. [Dependency Injector](08-dependency-injector.md)
 9. [Templating](09-templating.md)
 10. [Dynamic Pages](10-dynamic-pages.md)
