@@ -2,6 +2,9 @@
 
 namespace Example;
 
+use Http\HttpRequest;
+use Http\HttpResponse;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 error_reporting(E_ALL);
@@ -21,8 +24,8 @@ if ($environment !== 'production') {
 }
 $whoops->register();
 
-$request = new \Http\HttpRequest($_GET, $_POST, $_COOKIE, $_FILES, $_SERVER);
-$response = new \Http\HttpResponse;
+$request = new HttpRequest($_GET, $_POST, $_COOKIE, $_FILES, $_SERVER);
+$response = new HttpResponse;
 
 $routeDefinitionCallback = function (\FastRoute\RouteCollector $r) {
   $routes = include('Routes.php');
@@ -38,6 +41,7 @@ switch ($routeInfo[0]) {
   case \FastRoute\Dispatcher::NOT_FOUND:
     $response->setContent('404 - Page not found');
     $response->setStatusCode(404);
+    echo $response->getContent();
     break;
   case \FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
     $response->setContent('405 - Method not allowed');
@@ -46,8 +50,8 @@ switch ($routeInfo[0]) {
   case \FastRoute\Dispatcher::FOUND:
     $className = $routeInfo[1][0];
     $method = $routeInfo[1][1];
-    $vars = $routeInfo[2];
-    $class = new $className;
-    $class->$method($vars);
+    $class = new $className($response);
+    $class->$method();
+    echo $response->getContent();
     break;
 }
