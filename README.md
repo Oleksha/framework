@@ -30,7 +30,7 @@
 2. [Composer](02-composer.md)
 3. [Обработчик ошибок](03-error-handler.md)
 4. [HTTP](04-http.md)
-5. [Router](05-router.md)
+5. [Маршрутизатор](05-router.md)
 6. [Dispatching to a Class](06-dispatching-to-a-class.md)
 7. [Inversion of Control](07-inversion-of-control.md)
 8. [Dependency Injector](08-dependency-injector.md)
