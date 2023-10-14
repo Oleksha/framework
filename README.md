@@ -35,6 +35,6 @@
 7. [Инверсия управления](docs/07-inversion-of-control.md)
 8. [Dependency Injector](docs/08-dependency-injector.md)
 9. [Шаблонизация](docs/09-templating.md)
-10. [Dynamic Pages](docs/10-dynamic-pages.md)
+10. [Динамические страницы](docs/10-dynamic-pages.md)
 11. [Page Menu](docs/11-page-menu.md)
 12. [Frontend](docs/12-frontend.md)
