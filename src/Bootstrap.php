@@ -24,8 +24,10 @@ if ($environment !== 'production') {
 }
 $whoops->register();
 
-$request = new HttpRequest($_GET, $_POST, $_COOKIE, $_FILES, $_SERVER);
-$response = new HttpResponse;
+$injector = include('Dependencies.php');
+
+$request = $injector->make('Http\HttpRequest');
+$response = $injector->make('Http\HttpResponse');
 
 $routeDefinitionCallback = function (\FastRoute\RouteCollector $r) {
   $routes = include('Routes.php');
@@ -41,7 +43,6 @@ switch ($routeInfo[0]) {
   case \FastRoute\Dispatcher::NOT_FOUND:
     $response->setContent('404 - Page not found');
     $response->setStatusCode(404);
-    echo $response->getContent();
     break;
   case \FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
     $response->setContent('405 - Method not allowed');
@@ -50,8 +51,10 @@ switch ($routeInfo[0]) {
   case \FastRoute\Dispatcher::FOUND:
     $className = $routeInfo[1][0];
     $method = $routeInfo[1][1];
-    $class = new $className($response);
-    $class->$method();
-    echo $response->getContent();
+    $vars = $routeInfo[2];
+    $class = $injector->make($className);
+    $class->$method($vars);
     break;
 }
+
+echo $response->getContent();
